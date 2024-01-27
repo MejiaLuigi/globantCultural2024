@@ -10,7 +10,8 @@ public class ValorPropuesta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-
+    @OneToOne
+    @JoinColumn(name = "id_propuesta", referencedColumnName = "id_propuesta")
     private Propuesta propuesta;
 
     @Column(name="monto_total_propuesta")

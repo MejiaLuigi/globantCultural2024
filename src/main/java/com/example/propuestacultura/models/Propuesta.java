@@ -14,7 +14,8 @@ public class Propuesta {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id_propuesta;
 
-
+    @ManyToOne
+    @JoinColumn(name="id_proponente", referencedColumnName = "proponente_id")
     private Proponente proponente;
 
     @Column(name="nombre_propuesta")

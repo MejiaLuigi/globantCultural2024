@@ -5,11 +5,16 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "propuesta_documento")
+@IdClass(DocumentoAdjuntoPropuestaPK.class)
 public class DocumentoAdjuntoPropuesta {
     @Id
+    @ManyToOne
+    @JoinColumn(name = "id_propuesta", referencedColumnName = "id_propuesta")
     private Propuesta propuesta;
 
     @Id
+    @ManyToOne
+    @JoinColumn(name="id_documentoAdjunto", referencedColumnName = "id_documentoAdjunto")
     private DocumentosAdjuntos documentosAdjuntos;
 
 

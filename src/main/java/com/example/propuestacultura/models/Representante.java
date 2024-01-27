@@ -13,6 +13,8 @@ public class Representante {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id_representante;
 
+    @ManyToOne
+    @JoinColumn(name="id_tipo_documento", referencedColumnName = "id_tipo_documento")
     private TipoDocumento tipo_documento;
 
     @Column(name = "numero_documento")
@@ -41,13 +43,7 @@ public class Representante {
         this.id_representante = id_representante;
     }
 
-    public TipoDocumento getTipo_documento() {
-        return tipo_documento;
-    }
 
-    public void setTipo_documento(TipoDocumento tipo_documento) {
-        this.tipo_documento = tipo_documento;
-    }
 
     public String getNumero_documento() {
         return numero_documento;

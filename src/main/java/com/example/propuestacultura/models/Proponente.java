@@ -18,10 +18,12 @@ public class Proponente {
     @Column(name="trayectoria")
     private String trayectoria;
 
-
+    @ManyToOne
+    @JoinColumn(name="id_representante", referencedColumnName = "id_representante")
     private Representante representante;
 
-   
+   @ManyToOne
+   @JoinColumn(name="id_tipo_proponente", referencedColumnName = "id_tipo_Proponente")
     private TipoProponente tipoProponente;
 
     public UUID getProponente_id() {
