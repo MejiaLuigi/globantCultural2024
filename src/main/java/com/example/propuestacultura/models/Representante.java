@@ -43,7 +43,13 @@ public class Representante {
         this.id_representante = id_representante;
     }
 
+    public TipoDocumento getTipo_documento() {
+        return tipo_documento;
+    }
 
+    public void setTipo_documento(TipoDocumento tipo_documento) {
+        this.tipo_documento = tipo_documento;
+    }
 
     public String getNumero_documento() {
         return numero_documento;

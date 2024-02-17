@@ -1,5 +1,8 @@
 package com.example.propuestacultura.DTO;
-//@Data
+
+import lombok.Data;
+
+@Data
 
 public class DocumentosAdjuntoDTO {
 
