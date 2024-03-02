@@ -21,7 +21,7 @@ public class TipoDocumentoServicio {
 
 
     //Rutina para guardar en BD un tipo de documento
-    public TipoDocumentoDTO agregarTipoDocumentoDTO(TipoDocumento datosTipoDocumento) throws Exception{
+    public TipoDocumentoDTO   agregarTipoDocumentoDTO(TipoDocumento datosTipoDocumento) throws Exception{
 
         try{
             //VALIDAR
